@@ -1,22 +1,18 @@
-const { readContacts } = require('../utils/readContacts');
+// src/scripts/countContacts.js
+
+import { readContacts } from '../utils/readContacts.js';
 
 async function countContacts() {
   try {
-    // Зчитуємо масив контактів з файлу
     const contacts = await readContacts();
-
-    // Отримуємо кількість контактів
     const count = contacts.length;
 
-    // Виводимо кількість у консоль
     console.log(`Кількість контактів: ${count}`);
-
     return count;
   } catch (error) {
     console.error('Помилка при підрахунку контактів:', error);
-    return 0; // Повертаємо 0 у разі помилки
+    return 0;
   }
 }
 
-// Викликаємо функцію при запуску
 countContacts();

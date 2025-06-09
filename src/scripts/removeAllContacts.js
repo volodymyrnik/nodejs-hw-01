@@ -1,11 +1,11 @@
-const { writeContacts } = require('../utils/writeContacts');
+// src/scripts/removeAllContacts.js
+
+import { writeContacts } from '../utils/writeContacts.js';
 
 async function removeAllContacts() {
   try {
-    // Очищаємо масив контактів
     const emptyContacts = [];
 
-    // Записуємо порожній масив у файл
     await writeContacts(emptyContacts);
 
     console.log('Усі контакти успішно видалено.');
@@ -14,5 +14,4 @@ async function removeAllContacts() {
   }
 }
 
-// Викликаємо функцію при запуску
 removeAllContacts();

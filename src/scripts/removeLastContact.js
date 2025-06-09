@@ -1,5 +1,7 @@
-const { readContacts } = require('../utils/readContacts');
-const { writeContacts } = require('../utils/writeContacts');
+// src/scripts/removeLastContact.js
+
+import { readContacts } from '../utils/readContacts.js';
+import { writeContacts } from '../utils/writeContacts.js';
 
 async function removeLastContact() {
   try {
@@ -24,5 +26,4 @@ async function removeLastContact() {
   }
 }
 
-// Викликаємо функцію при запуску
 removeLastContact();
